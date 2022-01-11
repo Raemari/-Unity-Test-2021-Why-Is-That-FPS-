@@ -6,13 +6,13 @@ public class HealthPickup : MonoBehaviour
 {
 
     [SerializeField] int additionalHealth = 10;
-    [SerializeField] PlayerHealth playerHealth;
+    [SerializeField] PlayerManager playerManager;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            other.GetComponentInChildren<PlayerHealth>().PickupHealth(additionalHealth);
+            other.GetComponentInChildren<PlayerManager>().PickupHealth(additionalHealth);
             GameObject healthPickup = ObjectPool.instance.GetPooledObject("HealthPickup");
             healthPickup.SetActive(false);
         }

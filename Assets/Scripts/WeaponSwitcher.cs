@@ -16,9 +16,8 @@ public class WeaponSwitcher : MonoBehaviour
     }
     void Update()
     {
-        DisplayAmmo();
         int previousWeapon = currentWeapon;
-
+        DisplayAmmo();
         ProcessKeyInput();
         ProcessScrollWheel();
 
@@ -74,7 +73,7 @@ public class WeaponSwitcher : MonoBehaviour
         }
     }
 
-    private void SetWeaponActive()
+    public void SetWeaponActive()
     {
         int weaponIndex = 0;
 

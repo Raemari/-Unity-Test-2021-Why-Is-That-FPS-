@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 1098747320930221475}
   - component: {fileID: 1098747320921021795}
   - component: {fileID: 1098747320914848551}
-  - component: {fileID: 5612742103809150442}
   - component: {fileID: 4348509076525162859}
-  - component: {fileID: 5302881792395451627}
   - component: {fileID: 5267678870538153289}
+  - component: {fileID: 363185690325109824}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -136,20 +135,6 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
   animator: {fileID: 3004303310339811891}
---- !u!114 &5612742103809150442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098747320925085381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6e37af3cc6258e4c91378d3f214456e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 100
-  healthText: {fileID: 0}
 --- !u!114 &4348509076525162859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,28 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &5302881792395451627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098747320925085381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00231df20272b6e4bae2456d400afe4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammoSlots:
-  - ammoType: 0
-    ammoAmmount: 40
-    maxAmmo: 40
-  - ammoType: 1
-    ammoAmmount: 25
-    maxAmmo: 25
-  - ammoType: 2
-    ammoAmmount: 10
-    maxAmmo: 10
 --- !u!114 &5267678870538153289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +162,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageReceivedCanvas: {fileID: 0}
   impactTime: 0.3
+--- !u!114 &363185690325109824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098747320925085381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6d4c04a672c7641879a4600e7bd911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
+  healthText: {fileID: 0}
+  weaponIterate: {fileID: 294101020625648497}
 --- !u!1 &1098747320925085383
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +477,7 @@ PrefabInstance:
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: ammoSlot
       value: 
-      objectReference: {fileID: 5302881792395451627}
+      objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: animator
       value: 
@@ -510,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 1098747320926330083}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: fireRate
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: nextTimeToFire
@@ -547,6 +525,10 @@ PrefabInstance:
       propertyPath: fPCamera
       value: 
       objectReference: {fileID: 1098747320926330083}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: fireRate
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_RootOrder
       value: 2

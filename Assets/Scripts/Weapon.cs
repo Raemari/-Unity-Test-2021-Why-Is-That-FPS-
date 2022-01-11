@@ -15,7 +15,8 @@ public class Weapon : MonoBehaviour
 
     public int currentAmmo;
     public int maxAmmo = 10;
-    public int magazineSize = 30;
+    public int magazineSize;
+    private int maxMagazineSize = 70;
 
     public float reloadTime = 2f;
     public Animator animator;
@@ -50,7 +51,8 @@ public class Weapon : MonoBehaviour
         {
             animator.SetBool("isShooting", false);
         }
-    }private void CheckAmmo()
+    }
+    private void CheckAmmo()
     {
         if(currentAmmo == 0 && magazineSize == 0)
         {
@@ -64,24 +66,36 @@ public class Weapon : MonoBehaviour
             StartCoroutine(ReloadAmmo());
         }
     }
-        IEnumerator ReloadAmmo()
+    public void IncreaseMagazine()
+    {
+        if(magazineSize <= maxMagazineSize)
         {
-            isRealoading = true;
-            animator.SetBool("isReloading", true);
-            yield return new WaitForSeconds(reloadTime);
-            animator.SetBool("isReloading", false);
-            if(magazineSize >= maxAmmo)
-            {
-                currentAmmo = maxAmmo;
-                magazineSize -= maxAmmo;
-            }
-            else
-            {
-                currentAmmo = magazineSize;
-                magazineSize = 0;
-            }
-            isRealoading = false;
+            magazineSize+=10;
         }
+        if(magazineSize > maxMagazineSize)
+        {
+            magazineSize = maxMagazineSize;
+        }
+    }
+    IEnumerator ReloadAmmo()
+    {
+        isRealoading = true;
+        animator.SetBool("isReloading", true);
+        AudioManager.instance.Play("reload");
+        yield return new WaitForSeconds(reloadTime);
+        animator.SetBool("isReloading", false);
+        if(magazineSize >= maxAmmo)
+        {
+            currentAmmo = maxAmmo;
+            magazineSize -= maxAmmo;
+        }
+        else
+        {
+            currentAmmo = magazineSize;
+            magazineSize = 0;
+        }
+        isRealoading = false;
+    }
     private void Fire()
     {
         muzzleFlashVFX.Play();

@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<EnemyHealth>();
-        target = FindObjectOfType<PlayerHealth>().transform;
+        target = FindObjectOfType<PlayerManager>().transform;
         //enemyPrefab = GetComponent<GameObject>();
     }
 

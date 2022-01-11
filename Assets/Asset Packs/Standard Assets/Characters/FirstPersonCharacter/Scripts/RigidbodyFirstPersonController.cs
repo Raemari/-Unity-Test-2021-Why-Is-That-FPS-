@@ -85,6 +85,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private CapsuleCollider m_Capsule;
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
+        //additional for animator
         public Animator animator;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
 
@@ -167,6 +168,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
                     m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
                     m_Jumping = true;
+                    //aditional for jump sounds
+                    AudioManager.instance.Play("jump");
                 }
 
                 if (!m_Jumping && Mathf.Abs(input.x) < float.Epsilon && Mathf.Abs(input.y) < float.Epsilon && m_RigidBody.velocity.magnitude < 1f)
@@ -216,6 +219,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     x = CrossPlatformInputManager.GetAxis("Horizontal"),
                     y = CrossPlatformInputManager.GetAxis("Vertical")
                 };
+            //additional animator
             animator.SetFloat("speed", Mathf.Abs(input.x) + Mathf.Abs(input.y));
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
@@ -260,6 +264,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_IsGrounded && m_Jumping)
             {
                 m_Jumping = false;
+                //additional for land sound
+                AudioManager.instance.Play("land");
             }
         }
     }

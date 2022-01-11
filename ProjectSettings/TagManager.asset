@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Enemy
   - HealthPickup
-  - AmmoPickup
+  - PickupAmmo
+  - PickupRocket
+  - PickupShells
   layers:
   - Default
   - TransparentFX
