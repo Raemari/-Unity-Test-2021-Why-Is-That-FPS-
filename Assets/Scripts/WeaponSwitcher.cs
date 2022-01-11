@@ -2,16 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] int currentWeapon = 0;
+    [SerializeField] Weapon weapon;
+    [SerializeField] TextMeshProUGUI ammoText;
+
     void Start()
     {
         SetWeaponActive();
     }
     void Update()
     {
+        DisplayAmmo();
         int previousWeapon = currentWeapon;
 
         ProcessKeyInput();
@@ -21,6 +26,11 @@ public class WeaponSwitcher : MonoBehaviour
         {
             SetWeaponActive();
         }
+    }
+    private void DisplayAmmo()
+    {
+        weapon = FindObjectOfType<Weapon>();
+        ammoText.text = weapon.currentAmmo + " / " + weapon.magazineSize;
     }
     private void ProcessKeyInput()
     {

@@ -135,6 +135,7 @@ MonoBehaviour:
     stickToGroundHelperDistance: 0.6
     slowDownRate: 20
     airControl: 0
+  animator: {fileID: 3004303310339811891}
 --- !u!114 &5612742103809150442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+  healthText: {fileID: 0}
 --- !u!114 &4348509076525162859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,11 +177,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoSlots:
   - ammoType: 0
-    ammoAmmount: 20
+    ammoAmmount: 40
+    maxAmmo: 40
   - ammoType: 1
-    ammoAmmount: 10
+    ammoAmmount: 25
+    maxAmmo: 25
   - ammoType: 2
-    ammoAmmount: 5
+    ammoAmmount: 10
+    maxAmmo: 10
 --- !u!114 &5267678870538153289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a474c566bb9343a4ea9f7c3c1d799ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTakenCanvas: {fileID: 0}
+  damageReceivedCanvas: {fileID: 0}
   impactTime: 0.3
 --- !u!1 &1098747320925085383
 GameObject:
@@ -373,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294101020625648497}
   - component: {fileID: 2358784059989947759}
+  - component: {fileID: 3004303310339811891}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -410,6 +416,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: 0
+  weapon: {fileID: 0}
+  ammoText: {fileID: 0}
+--- !u!95 &3004303310339811891
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823533032708671712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9fbc46fe05fa9244ebec5289201acdb1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &478444048567933891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 117070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: m_RootOrder
@@ -474,9 +501,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5302881792395451627}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3004303310339811891}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: fPCamera
       value: 
       objectReference: {fileID: 1098747320926330083}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: fireRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: nextTimeToFire
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2625352687250317194, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: fpsCamera
       value: 
@@ -485,7 +524,8 @@ PrefabInstance:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 1098747320914848551}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2110483452486596700, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
 --- !u!4 &478444048568076013 stripped
 Transform:
@@ -500,9 +540,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 294101020625648497}
     m_Modifications:
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
-      propertyPath: ammoSlot
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 5302881792395451627}
+      objectReference: {fileID: 3004303310339811891}
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: fPCamera
       value: 
@@ -557,9 +597,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5853400519504985267, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
 --- !u!4 &7672051326512052721 stripped
 Transform:
@@ -683,19 +724,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 3832703582600972128, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
-      propertyPath: ammoSlot
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 5302881792395451627}
+      objectReference: {fileID: 3004303310339811891}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: fPCamera
       value: 
       objectReference: {fileID: 1098747320926330083}
-    m_RemovedComponents: []
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563352152057651982, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6563352152057651982, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
 --- !u!4 &5208217026144968255 stripped
 Transform:

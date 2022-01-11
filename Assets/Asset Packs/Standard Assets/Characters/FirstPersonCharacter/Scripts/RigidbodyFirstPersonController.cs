@@ -85,6 +85,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private CapsuleCollider m_Capsule;
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
+        public Animator animator;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
 
 
@@ -215,6 +216,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     x = CrossPlatformInputManager.GetAxis("Horizontal"),
                     y = CrossPlatformInputManager.GetAxis("Vertical")
                 };
+            animator.SetFloat("speed", Mathf.Abs(input.x) + Mathf.Abs(input.y));
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
         }
