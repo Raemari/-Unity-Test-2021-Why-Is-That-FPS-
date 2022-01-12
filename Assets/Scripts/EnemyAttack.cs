@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
     PlayerManager target;
     [SerializeField] int damage = 20;
-    [SerializeField] PlayerManager player;
+    // [SerializeField] PlayerManager player;
 
     void Start()
     {

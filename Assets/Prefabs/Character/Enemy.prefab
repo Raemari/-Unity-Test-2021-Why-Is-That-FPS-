@@ -176,7 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  player: {fileID: 0}
 --- !u!54 &2985447697245127649
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - PickupAmmo
   - PickupRocket
   - PickupShells
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX

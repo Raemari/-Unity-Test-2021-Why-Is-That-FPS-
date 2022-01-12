@@ -21,6 +21,6 @@ public class DisplayDamage : MonoBehaviour
         damageReceivedCanvas.enabled = true;
         yield return new WaitForSeconds(impactTime);
         //Do after waiting
-        damageReceivedCanvas.enabled = true;
+        damageReceivedCanvas.enabled = false;
     }
 }
