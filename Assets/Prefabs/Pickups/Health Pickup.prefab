@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6338885444133837580}
   - component: {fileID: 7851101889618628146}
-  - component: {fileID: 363073525560432786}
+  - component: {fileID: 9189437511756184850}
   m_Layer: 0
   m_Name: Health Pickup
   m_TagString: HealthPickup
@@ -47,7 +47,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &363073525560432786
+--- !u!114 &9189437511756184850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   additionalHealth: 10
-  playerHealth: {fileID: 5612742103809150442, guid: bc988ee6ac817724281b4cc4836091de, type: 3}
+  playerManager: {fileID: 0}
 --- !u!1001 &2939443419172595900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711975037907417708, guid: 70adced981de9d3498a9b0d4454ceb38, type: 3}
       propertyPath: m_VersionIndex
-      value: 346
+      value: 391
       objectReference: {fileID: 0}
     - target: {fileID: 3711975037907417711, guid: 70adced981de9d3498a9b0d4454ceb38, type: 3}
       propertyPath: m_Mesh
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 15540544769783932, guid: 2d5480fd6480af94f937ef85b2311731, type: 3}
       propertyPath: m_VersionIndex
-      value: 1089
+      value: 1119
       objectReference: {fileID: 0}
     - target: {fileID: 757956754035857907, guid: 2d5480fd6480af94f937ef85b2311731, type: 3}
       propertyPath: m_Mesh

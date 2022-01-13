@@ -134,6 +134,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+
+            //additional for walk sound
+            if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+            {
+                AudioManager.instance.Play("walk");
+            }
+            if(Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                AudioManager.instance.Play("pant");
+            }
+            if(!Input.GetButton( "Horizontal" ) && !Input.GetButton( "Vertical"))
+            {
+                AudioManager.instance.Stop("walk");
+            }
+            if(!Input.GetKey(KeyCode.LeftShift))
+                AudioManager.instance.Stop("pant");
         }
 
 

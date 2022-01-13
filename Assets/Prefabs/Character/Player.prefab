@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6d4c04a672c7641879a4600e7bd911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
   healthText: {fileID: 0}
   weaponIterate: {fileID: 294101020625648497}
 --- !u!1 &1098747320925085383

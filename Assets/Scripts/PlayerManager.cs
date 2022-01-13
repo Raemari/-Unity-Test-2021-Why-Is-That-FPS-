@@ -95,26 +95,3 @@ public class PlayerManager : MonoBehaviour
         }
     }
 }
-    // public void GetCurrentMagazineAmount()
-    // {
-    //     for(int i =0; i < weaponIterate.childCount; i++)
-    //     {
-    //         if(weaponIterate.GetChild(i).name == "Gun")
-    //         {
-    //              gun = weaponIterate.GetChild(i).GetComponent<Weapon>().IncreaseMagazine();
-    //             varGun = gun;
-                
-    //             Debug.Log("GET CURRENT AMMO AMOUNT GUUUN++");
-    //         }
-    //         if(weaponIterate.GetChild(i).name == "SciFiGun_Specular")
-    //         {
-    //             var varscifiGun = weaponIterate.GetChild(i).GetComponent<Weapon>().magazineSize++;
-    //             Debug.Log("GET CURRENT AMMO AMOUNT SICIFIGUN++");
-    //         }
-    //         if(weaponIterate.GetChild(i).name == "Carbine")
-    //         {
-    //             var varcarbine = weaponIterate.GetChild(i).GetComponent<Weapon>().magazineSize++;
-    //             Debug.Log("GET CURRENT AMMO AMOUNT CARBINE++");
-    //         }
-    //     }
-    // }
