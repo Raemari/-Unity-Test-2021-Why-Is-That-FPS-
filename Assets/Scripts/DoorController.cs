@@ -24,6 +24,7 @@ public class DoorController : MonoBehaviour
         if(doorName == this.doorName && id == this.id)
         {
             doorAnim.SetBool("character_nearby", true);
+            AudioManager.instance.Play("door");
             col.enabled = false;
         }
     }
@@ -40,7 +41,6 @@ public class DoorController : MonoBehaviour
         if(doorName == this.doorName && id == this.id)
         {
             transform.GetChild(0).gameObject.SetActive(false);
-            Debug.Log("YOURE LOCKED NEED TO DEFEAT BOSS");
         }
     }
     private void OnDoorWayUnlocked(string doorName, int id)
@@ -48,7 +48,6 @@ public class DoorController : MonoBehaviour
         if(doorName == this.doorName && id == this.id)
         {
             transform.GetChild(0).gameObject.SetActive(true);
-            Debug.Log("UNLOCKED");
         }
     }
     private void OnDisable()

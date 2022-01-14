@@ -89,5 +89,6 @@ public class WeaponSwitcher : MonoBehaviour
             }
             weaponIndex++;
         }
+        return;
     }
 }

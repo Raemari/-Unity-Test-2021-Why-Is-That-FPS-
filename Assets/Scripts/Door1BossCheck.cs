@@ -14,10 +14,12 @@ public class Door1BossCheck : MonoBehaviour
         {
             GameEvents.instance.DoorWayTriggerClose(doorName, id);
             GameEvents.instance.DoorWayTriggerLocked(doorName, id);
+            AudioManager.instance.Play("locked");
         }
         else
         {
             GameEvents.instance.DoorWayTriggerUnlocked(doorName, id);
+            AudioManager.instance.Play("unlocked");
         }
     }
 }

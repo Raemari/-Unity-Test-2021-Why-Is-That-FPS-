@@ -17,7 +17,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
-        [SerializeField] private MouseLook m_MouseLook;
+        //additional for mouselook
+        public MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
         [SerializeField] private bool m_UseHeadBob;
@@ -41,6 +42,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        //additional for animator
+        public Animator animator;
 
         // Use this for initialization
         private void Start()
@@ -126,7 +129,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
-
+            //additional animator
+            animator.SetFloat("speed", Mathf.Abs(m_MoveDir.x) + Mathf.Abs(m_MoveDir.z));
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
         }
@@ -219,6 +223,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)
             {
+            //additional animator
+            animator.SetFloat("speed", Mathf.Abs(m_Input.x) + Mathf.Abs(m_Input.y));
                 m_Input.Normalize();
             }
 
