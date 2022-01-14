@@ -8,13 +8,14 @@ public class Door2BossCheck : MonoBehaviour
     public string doorName;
     public int id;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         for(int i = 0; i < enemyBosses.Length; i++)
         {
             if(enemyBosses[i].activeInHierarchy)
             {
                 GameEvents.instance.DoorWayTriggerLocked(doorName, id);
+                GameEvents.instance.DoorWayTriggerClose(doorName, id);
             }
             else
             {

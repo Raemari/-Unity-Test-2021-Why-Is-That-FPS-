@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door1BossCheck : MonoBehaviour
 {
-    GameObject enemyBoss;
+    [SerializeField] GameObject enemyBoss;
     public string doorName;
     public int id;
 

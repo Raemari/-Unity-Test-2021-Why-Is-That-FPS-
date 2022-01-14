@@ -51,4 +51,11 @@ public class DoorController : MonoBehaviour
             Debug.Log("UNLOCKED");
         }
     }
+    private void OnDisable()
+    {
+        GameEvents.instance.OnDoorwayTriggerEnter -= OnDoorWayOpen;
+        GameEvents.instance.OnDoorWayTriggerExit -= OnDoorWayClose;
+        GameEvents.instance.OnDoorWayTriggerLocked -= OnDoorWayLocked;
+        GameEvents.instance.OnDoorWayTriggerUnLocked -= OnDoorWayUnlocked;
+    }
 }
