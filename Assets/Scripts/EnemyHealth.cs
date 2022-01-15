@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
             EnemyDies();
         }
     }
-    private void EnemyDies()
+    public void EnemyDies()
     {
         if(isDead) return;
         isDead = true;
