@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 257721824722751123}
   - component: {fileID: 7839057591134922021}
   - component: {fileID: 757956754035857907}
-  - component: {fileID: 4966005200496270046}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -405,7 +404,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 7de0f11cde3e99c449c528ad1be62e54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -434,18 +433,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3890367404429745420}
-  m_Mesh: {fileID: 0}
---- !u!64 &4966005200496270046
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3890367404429745420}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}

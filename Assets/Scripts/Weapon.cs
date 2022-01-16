@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     public int currentAmmo;
     public int maxAmmo = 10;
     public int magazineSize;
-    private int maxMagazineSize = 70;
+    private int maxMagazineSize = 50;
 
     public float reloadTime = 2f;
     public Animator animator;

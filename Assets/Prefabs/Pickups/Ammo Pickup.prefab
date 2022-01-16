@@ -45,8 +45,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_Center: {x: 0.09, y: -0.05, z: 0}
 --- !u!1001 &1525153077856666207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,7 +68,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 669722350584013139, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.565
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 669722350584013139, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_LocalPosition.y
@@ -112,7 +112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4468219754417961367, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_VersionIndex
-      value: 2198
+      value: 2216
       objectReference: {fileID: 0}
     - target: {fileID: 6322968357159834031, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_Mesh
@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 669722350584013139, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.815
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 669722350584013139, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_LocalPosition.y
@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4468219754417961367, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_VersionIndex
-      value: 2192
+      value: 2210
       objectReference: {fileID: 0}
     - target: {fileID: 6322968357159834031, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_Mesh
@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 669722350584013139, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.565
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 669722350584013139, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_LocalPosition.y
@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4468219754417961367, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_VersionIndex
-      value: 2195
+      value: 2213
       objectReference: {fileID: 0}
     - target: {fileID: 6322968357159834031, guid: c2d2fce2f5bb02a41897bb4a8c08f751, type: 3}
       propertyPath: m_Mesh
