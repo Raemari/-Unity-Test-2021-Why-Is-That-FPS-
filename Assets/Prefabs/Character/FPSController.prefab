@@ -222,7 +222,7 @@ MonoBehaviour:
   histogram: 0
   waveform: 0
   vectorscope: 0
-  debugOverlay: 7
+  debugOverlay: 0
 --- !u!20 &7895835460532647883
 Camera:
   m_ObjectHideFlags: 0
@@ -600,6 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
   weaponIterate: {fileID: 1595188723353224349}
+  pauseCanvas: {fileID: 0}
 --- !u!1 &7886851510974254941
 GameObject:
   m_ObjectHideFlags: 0
