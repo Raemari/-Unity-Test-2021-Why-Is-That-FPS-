@@ -22,6 +22,7 @@ public class Weapon : MonoBehaviour
     public Animator animator;
     private bool isRealoading = false;
     private bool isShooting = false;
+    public bool allowedToShoot = true;
 
     private void OnEnable()
     {
@@ -36,7 +37,7 @@ public class Weapon : MonoBehaviour
     private void Update()
     {
         CheckAmmo();
-        if(Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire && currentAmmo > 0 && magazineSize >= 0)
+        if(Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire && currentAmmo > 0 && magazineSize >= 0 && allowedToShoot == true)
         {
             isShooting = true;
             if(isShooting == true)
@@ -81,7 +82,8 @@ public class Weapon : MonoBehaviour
     {
         isRealoading = true;
         animator.SetBool("isReloading", true);
-        AudioManager.instance.Play("reload");
+        // AudioManager.instance.Play("reload");
+        GameManager.GM.PlayReload();
         yield return new WaitForSeconds(reloadTime);
         animator.SetBool("isReloading", false);
         if(magazineSize >= maxAmmo)
@@ -99,7 +101,8 @@ public class Weapon : MonoBehaviour
     private void Fire()
     {
         muzzleFlashVFX.Play();
-        AudioManager.instance.Play("shootSound");
+        //AudioManager.instance.Play("shootSound");
+        GameManager.GM.PlayShoot();
         animator.SetBool("isShooting", true);
         currentAmmo--;
 

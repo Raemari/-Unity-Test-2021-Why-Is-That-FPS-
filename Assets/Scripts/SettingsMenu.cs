@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -24,10 +25,12 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] float multiplier = 30f;
     [SerializeField] Toggle toggle;
+    private float lastValue;
     [SerializeField] TMP_Dropdown resolutionDropdown;
     [SerializeField] TMP_Dropdown qualityDropdown;
-    private bool disableToggleEvent;
+    [SerializeField] RenderPipelineAsset[] qualityLevels;
     private Resolution[] resolutions;
+    private bool disableToggleEvent;
 
     private void Awake()
     {
@@ -38,11 +41,17 @@ public class SettingsMenu : MonoBehaviour
     private void Start()
     {
         slider.value = PlayerPrefs.GetFloat(volumeParameter, slider.value);
+        //needed for the case when default and playerperf values are same and 
+        //thus no volume change has actually happened and then mixer value won't
+        //be set since the handle is called only on value changed...
+        HandleSliderValueChanged(slider.value);
 
         ResolutionDropDown();
 
         int Quality = PlayerPrefs.GetInt("qualityIndex", 0);
-        qualityDropdown.value = Quality;
+        qualityDropdown.value = QualitySettings.GetQualityLevel();
+        //ADDED, DOUBLE CHECK IF WORKING
+        qualityDropdown.value =Quality;
 
         panel = transform.Find("Panel");
         waitingForKey = false;
@@ -181,6 +190,7 @@ public class SettingsMenu : MonoBehaviour
     public void SetQuality (int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        QualitySettings.renderPipeline = qualityLevels[qualityIndex];
         PlayerPrefs.SetInt("qualityIndex", qualityIndex);
     }
     public void SetFullScreen(bool isFullscreen)
@@ -190,18 +200,21 @@ public class SettingsMenu : MonoBehaviour
     private void HandleSliderValueChanged(float value)
     {
         audioMixer.SetFloat(volumeParameter, Mathf.Log10(value) * multiplier);
-        disableToggleEvent = true;
+        // disableToggleEvent = true;
         toggle.isOn = slider.value > slider.minValue;
-        disableToggleEvent = false;
+        // disableToggleEvent = false;
     }
-    private void HandleToggleValueChanged(bool enableSound)
+   private void HandleToggleValueChanged(bool enableSound)
     {
-        if(disableToggleEvent)
-            return;
-        if(enableSound)
-            slider.value = slider.maxValue;
+        if (enableSound)
+        {
+            slider.value = lastValue > slider.minValue ? lastValue : slider.minValue + 0.0001f;
+        }
         else
+        {
+            lastValue = slider.value;
             slider.value = slider.minValue;
+        }
     }
     private void OnDisable()
     {

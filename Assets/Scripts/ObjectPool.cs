@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 [System.Serializable]
 public class ObjectPoolItems
@@ -32,7 +31,6 @@ public class ObjectPool : MonoBehaviour
         pooledObjects = new List<GameObject>();
         foreach(ObjectPoolItems item in itemsToPool)
         {
-            //TODO check if i can disbale the navmesh in this part???
             for(int i = 0; i < item.amountToPool; i++)
             {
                 GameObject obj = Instantiate(item.objectToPool);

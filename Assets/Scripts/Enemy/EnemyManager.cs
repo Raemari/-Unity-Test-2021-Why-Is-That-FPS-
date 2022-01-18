@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] spawnPoints;
+    public static EnemyManager enemyManager;
+    public GameObject[] spawnPoints;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class EnemyManager : MonoBehaviour
         EnemyHealth.OnEnemyKilled += SpawnEnemies;
     }
 
-    private void SpawnEnemies()
+    public void SpawnEnemies()
     {
         //this if for normal instantiating the enemy in random locations
         // GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length-1)];
@@ -28,6 +29,7 @@ public class EnemyManager : MonoBehaviour
             //added code for the random location where the enemy should spawn with object pooling
             GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
             enemy.transform.position = spawnPoint.transform.position;
+            enemy.transform.rotation = spawnPoint.transform.rotation;
             enemy.SetActive(true);
         }
     }

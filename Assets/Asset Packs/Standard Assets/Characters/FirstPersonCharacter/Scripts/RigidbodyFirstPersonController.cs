@@ -136,21 +136,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             //additional for walk sound
-            if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
-            {
-                AudioManager.instance.Play("walk");
-            }
-            if(Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                AudioManager.instance.Play("pant");
-            }
-            if(!Input.GetButton( "Horizontal" ) && !Input.GetButton( "Vertical"))
-            {
-                AudioManager.instance.Stop("walk");
-            }
-            if(!Input.GetKey(KeyCode.LeftShift))
-                AudioManager.instance.Stop("pant");
-        }
+        //     if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+        //     {
+        //         AudioManager.instance.Play("walk");
+        //     }
+        //     if(Input.GetKeyDown(KeyCode.LeftShift))
+        //     {
+        //         AudioManager.instance.Play("pant");
+        //     }
+        //     if(!Input.GetButton( "Horizontal" ) && !Input.GetButton( "Vertical"))
+        //     {
+        //         AudioManager.instance.Stop("walk");
+        //     }
+        //     if(!Input.GetKey(KeyCode.LeftShift))
+        //         AudioManager.instance.Stop("pant");
+         }
 
 
         private void FixedUpdate()
@@ -185,7 +185,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
                     m_Jumping = true;
                     //aditional for jump sounds
-                    AudioManager.instance.Play("jump");
+                    //AudioManager.instance.Play("jump");
                 }
 
                 if (!m_Jumping && Mathf.Abs(input.x) < float.Epsilon && Mathf.Abs(input.y) < float.Epsilon && m_RigidBody.velocity.magnitude < 1f)
@@ -281,7 +281,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jumping = false;
                 //additional for land sound
-                AudioManager.instance.Play("land");
+                //AudioManager.instance.Play("land");
             }
         }
     }

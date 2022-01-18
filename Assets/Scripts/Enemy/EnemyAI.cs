@@ -61,7 +61,7 @@ public class EnemyAI : MonoBehaviour
     {
         GetComponent<Animator>().SetTrigger("move");
         GetComponent<Animator>().SetBool("attack", false);
-        if(navMeshAgent!= null)
+        if(navMeshAgent!= null && navMeshAgent.enabled == true)
         {
             navMeshAgent.SetDestination(target.position);
         }

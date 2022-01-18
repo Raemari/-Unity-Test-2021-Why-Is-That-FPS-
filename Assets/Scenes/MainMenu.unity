@@ -303,14 +303,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8348651069056794725, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8348651069081262731, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8348651070698510728, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -398,10 +390,6 @@ PrefabInstance:
     - target: {fileID: 8348651070698510732, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8348651070759228150, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}

@@ -472,10 +472,10 @@ AudioSource:
   m_GameObject: {fileID: 7750012023224133138}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 8028e5fb059dfe342a185162e05e574b, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -600,7 +600,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
   weaponIterate: {fileID: 1595188723353224349}
-  pauseCanvas: {fileID: 0}
 --- !u!1 &7886851510974254941
 GameObject:
   m_ObjectHideFlags: 0

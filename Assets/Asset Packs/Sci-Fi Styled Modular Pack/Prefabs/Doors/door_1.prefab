@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ed17b5513f59040b4fcd95ce6953d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorName: 
+  id: 0
 --- !u!65 &17308004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -414,7 +416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3a5a9b9b4afee049943274c300b52f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -461,6 +463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1726570de251a43b17a0472da27c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBoss: {fileID: 0}
+  doorName: 
+  id: 0
 --- !u!1 &3039998185947549453
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +528,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3a5a9b9b4afee049943274c300b52f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -570,3 +575,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51f2fcfc8da26409c77eef5a9f129b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorName: 
+  id: 0
