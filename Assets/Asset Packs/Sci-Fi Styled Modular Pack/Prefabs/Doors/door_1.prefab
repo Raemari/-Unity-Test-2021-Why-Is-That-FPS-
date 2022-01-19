@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ed17b5513f59040b4fcd95ce6953d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorName: 
-  id: 0
+  doorName: 1
+  id: 1
 --- !u!65 &17308004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ BoxCollider:
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 4, y: 4.0475597, z: 0.02}
-  m_Center: {x: 0, y: 2.0237799, z: -0.03}
+  m_Center: {x: 0, y: 2.0237799, z: 0.16}
 --- !u!1 &174170
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,8 +449,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 4, z: 2}
-  m_Center: {x: 0.000011444095, y: 1.95, z: 0.000026702894}
+  m_Size: {x: 3, y: 4, z: 1.2096882}
+  m_Center: {x: 0.000011444092, y: 1.95, z: -0.3951292}
 --- !u!114 &8692286206968406571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBoss: {fileID: 0}
-  doorName: 
-  id: 0
+  doorName: 1
+  id: 1
 --- !u!1 &3039998185947549453
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,8 +561,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 4, z: 2.8941283}
-  m_Center: {x: 0.000011444092, y: 1.95, z: -0.34703755}
+  m_Size: {x: 3, y: 4, z: 2.0001345}
+  m_Center: {x: 0.000011444092, y: 1.95, z: 0.09995937}
 --- !u!114 &7210393011056103006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,5 +575,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51f2fcfc8da26409c77eef5a9f129b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorName: 
-  id: 0
+  doorName: 1
+  id: 1

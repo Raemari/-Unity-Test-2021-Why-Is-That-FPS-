@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d9f6e60d4587d4ba86c9dc89b40713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgSound: {fileID: 8300000, guid: 48146f6eca232da46948cd2f0f1e36cc, type: 3}
+  bgSound: {fileID: 8300000, guid: bfb6f23bf99ca3b4396bb4a79adb5b7d, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 9eb3d06ce3ff1834fb822a621f499605, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 861a43b2f875e8b4a9052c6e1f09ba70, type: 3}
   doorUnlockedSound: {fileID: 8300000, guid: 99b131c6a1ddd4e4cb53a02a79e54ecc, type: 3}
@@ -61,7 +61,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8028e5fb059dfe342a185162e05e574b, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 48146f6eca232da46948cd2f0f1e36cc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bfb6f23bf99ca3b4396bb4a79adb5b7d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

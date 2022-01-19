@@ -14,8 +14,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] Transform weaponIterate;
     Weapon weapon;
 
-    // [SerializeField] GameObject pauseCanvas;
-    // bool isGamePaused;
 
 
     private void Start()
@@ -25,11 +23,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        // if(Input.GetKeyDown(KeyCode.Escape))
-        // {
-        //     isGamePaused = !isGamePaused;
-        //     PauseGame();
-        // }
         healthText.text = "Health: " + playerHealth.ToString() + "/100";
     }
 
@@ -56,29 +49,6 @@ public class PlayerManager : MonoBehaviour
             playerHealth = maxPlayerHealth;
         }
     }
-    // public void PauseGame()
-    // {
-    //     //data should be saved every time pause game is clicked
-    //     if(isGamePaused)
-    //     {
-    //         pauseCanvas.SetActive(true);
-    //         Time.timeScale = 0;
-    //         Cursor.lockState = CursorLockMode.None;
-    //         //try if i can use GetComponentInChildren
-    //         FindObjectOfType<WeaponSwitcher>().enabled = false;
-    //     }
-    //     else
-    //     {
-    //         ResumeGameFromPause();
-    //     }
-    // }
-    // public void ResumeGameFromPause()
-    // {
-    //     Time.timeScale = 1;
-    //     pauseCanvas.SetActive(false);
-    //     //try if i can use GetComponentInChildren
-    //     FindObjectOfType<WeaponSwitcher>().enabled = true;
-    // }
     private void OnTriggerEnter(Collider other)
     {
         //iterate in the child of "weapons"

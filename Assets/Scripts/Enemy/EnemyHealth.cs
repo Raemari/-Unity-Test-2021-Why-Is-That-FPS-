@@ -28,8 +28,8 @@ public class EnemyHealth : MonoBehaviour
         if(isDead) return;
         isDead = true;
         GetComponent<Animator>().SetTrigger("isDead");
-        //for object pooling
-        if(gameObject.tag == "Enemy")
+
+        if(gameObject.tag == "Enemy" || gameObject.tag == "EnemyBoss")
         {
             gameObject.SetActive(false);
 
@@ -38,15 +38,15 @@ public class EnemyHealth : MonoBehaviour
                 OnEnemyKilled();
             }
         }
-        if(gameObject.tag == "EnemyBoss")
-        {
-            Destroy(gameObject);
+        // if(gameObject.tag == "EnemyBoss")
+        // {
+        //     gameObject.SetActive(false);
 
-            if(OnEnemyKilled != null)
-            {
-                OnEnemyKilled();
-            }
-        }
+        //     if(OnEnemyKilled != null)
+        //     {
+        //         OnEnemyKilled();
+        //     }
+        // }
 
     }
 }

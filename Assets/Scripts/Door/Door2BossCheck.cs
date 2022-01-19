@@ -26,6 +26,5 @@ public class Door2BossCheck : MonoBehaviour
                 GameManager.GM.PlayDoorUnlocked();
             }
         }
-        return;
     }
 }

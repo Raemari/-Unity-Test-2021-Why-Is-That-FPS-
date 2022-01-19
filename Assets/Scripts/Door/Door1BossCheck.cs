@@ -21,7 +21,7 @@ public class Door1BossCheck : MonoBehaviour
         {
             GameEvents.instance.DoorWayTriggerUnlocked(doorName, id);
             //AudioManager.instance.Play("unlocked");
-            GameManager.GM.PlayDoorUnlocked();
+            // GameManager.GM.PlayDoorUnlocked();
         }
     }
 }

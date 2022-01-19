@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d32a3164df33f41aed16561f73f65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalHealth: 10
+  additionalHealth: 15
   playerManager: {fileID: 0}
 --- !u!1001 &2939443419172595900
 PrefabInstance:

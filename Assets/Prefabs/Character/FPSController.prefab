@@ -847,6 +847,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 6046346930323754995}

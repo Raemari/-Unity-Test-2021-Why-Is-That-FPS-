@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4285381d9359184caa3e51c9a3c3b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 20
+  enemyHealth: 13
 --- !u!95 &4682387211201693744
 Animator:
   serializedVersion: 3
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d959cbc701f5fa34b8ce71de188bec10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 4
 --- !u!54 &2985447697245127649
 Rigidbody:
   m_ObjectHideFlags: 0
