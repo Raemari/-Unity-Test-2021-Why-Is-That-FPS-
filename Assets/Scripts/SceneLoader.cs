@@ -7,11 +7,12 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader instance;
 
-    private void OnTriggerEnter(Collider other)
-    {
-            LoadFinalScene();
-            Debug.Log("triggerfinalscene");
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     LoadFinalScene();
+    //     Debug.Log("triggerfinalscene");
+    //     Cursor.visible = true;
+    // }
     public void PlayAgain()
     {
         Time.timeScale = 1;
@@ -20,18 +21,6 @@ public class SceneLoader : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
-    }
-    public void StartGame()
-    {
-        //saved progress will get lost, proceed to new game?
-    }
-    public void ResumeGame()
-    {
-        //check if there's current data if no save data, cant resume game
-    }
-    public void ShowSettingsMenu()
-    {
-        //create a new scene for options change
     }
     public void LoadIntroScene()
     {
@@ -43,20 +32,18 @@ public class SceneLoader : MonoBehaviour
     {
         //loads Floor1 scene
         Time.timeScale = 1;
+        Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+        Cursor.visible = true;
         Time.timeScale = 1;
     }
-    public void LoadFinalScene()
-    {
-        //load final scene, should be cut scene for ending
-        SceneManager.LoadScene(3);
-    }
-    public void ResetData()
-    {
-        //reset all saved data and settings
-    }
+    // public void LoadFinalScene()
+    // {
+    //     //load final scene, should be cut scene for ending
+    //     SceneManager.LoadScene(3);
+    // }
 }

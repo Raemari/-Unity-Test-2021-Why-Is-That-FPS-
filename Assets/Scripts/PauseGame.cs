@@ -27,6 +27,7 @@ public class PauseGame : MonoBehaviour
         //data should be saved every time pause game is clicked
         if(isGamePaused)
         {
+            Cursor.visible = true;
             weapon.allowedToShoot = false;
             pauseCanvas.SetActive(true);
             Time.timeScale = 0;
@@ -40,6 +41,7 @@ public class PauseGame : MonoBehaviour
     }
     public void ResumeGameFromPause()
     {
+        Cursor.visible = false;
         isGamePaused = false;
         Time.timeScale = 1;
         pauseCanvas.SetActive(false);

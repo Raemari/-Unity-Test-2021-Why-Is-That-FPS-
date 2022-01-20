@@ -10,6 +10,7 @@ TagManager:
   - PickupRocket
   - PickupShells
   - EnemyBoss
+  - EndTrigger
   layers:
   - Default
   - TransparentFX

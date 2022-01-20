@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 //PlayerHealth and management of AMMO
 public class PlayerManager : MonoBehaviour
 {
-    private int playerHealth = 100;
-    private int maxPlayerHealth = 100;
-    private int additionalHealth = 10;
+    [SerializeField] int playerHealth = 100;
+    [SerializeField] int maxPlayerHealth = 100;
+    [SerializeField] int additionalHealth = 10;
     [SerializeField] TextMeshProUGUI healthText;
 
     [SerializeField] Transform weaponIterate;
     Weapon weapon;
-
 
 
     private void Start()

@@ -27,8 +27,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] Toggle toggle;
     private float lastValue;
     [SerializeField] TMP_Dropdown resolutionDropdown;
-    [SerializeField] TMP_Dropdown qualityDropdown;
-    [SerializeField] RenderPipelineAsset[] qualityLevels;
+
     private Resolution[] resolutions;
     private bool disableToggleEvent;
 
@@ -47,11 +46,6 @@ public class SettingsMenu : MonoBehaviour
         HandleSliderValueChanged(slider.value);
 
         ResolutionDropDown();
-
-        int Quality = PlayerPrefs.GetInt("qualityIndex", 0);
-        qualityDropdown.value = QualitySettings.GetQualityLevel();
-        //ADDED, DOUBLE CHECK IF WORKING
-        qualityDropdown.value =Quality;
 
         panel = transform.Find("Panel");
         waitingForKey = false;
@@ -185,13 +179,6 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height,Screen.fullScreen);
-    }
-
-    public void SetQuality (int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-        QualitySettings.renderPipeline = qualityLevels[qualityIndex];
-        PlayerPrefs.SetInt("qualityIndex", qualityIndex);
     }
     public void SetFullScreen(bool isFullscreen)
     {

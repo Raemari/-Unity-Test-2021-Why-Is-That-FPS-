@@ -341,7 +341,7 @@ MonoBehaviour:
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
-  m_GravityMultiplier: 2
+  m_GravityMultiplier: 4
   m_MouseLook:
     XSensitivity: 2
     YSensitivity: 2
@@ -753,6 +753,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 0}
@@ -766,7 +770,15 @@ PrefabInstance:
       objectReference: {fileID: 7895835460532647883}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: fireRate
-      value: 8
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: impactForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: magazineSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: nextTimeToFire
@@ -848,7 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: damage
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: animator
@@ -860,6 +872,18 @@ PrefabInstance:
       objectReference: {fileID: 7895835460532647883}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: fireRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: impactForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: nextTimeToFire
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6563352152057651982, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
@@ -890,7 +914,15 @@ PrefabInstance:
       objectReference: {fileID: 7895835460532647883}
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: fireRate
-      value: 4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: impactForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: magazineSize
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_RootOrder

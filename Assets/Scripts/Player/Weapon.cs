@@ -26,6 +26,7 @@ public class Weapon : MonoBehaviour
 
     private void OnEnable()
     {
+        Cursor.visible = false;
         isRealoading = false;
         animator.SetBool("isReloading", false);
         animator.SetBool("isShooting", false);

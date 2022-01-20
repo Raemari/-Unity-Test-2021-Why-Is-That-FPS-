@@ -616,12 +616,12 @@ MonoBehaviour:
     other survivors...
 
 
-    trapped in a place that no one knew how it even existed,
-    finding out why seems to be beyond the capabilities of "humans".
+    trapped and lost in a place without having any idea
+    how it happened. thus, finding out why is deemed to be impossible to unravel
+    .
 
 
-    until
-    then, thriving is the only plausible way to survive...'
+    until then, surviving is going to be the only choice.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 6964898327717484223}
   - component: {fileID: 6964898327717484208}
   m_Layer: 5
-  m_Name: Canvas_Credits
+  m_Name: Canvas_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1072,7 +1072,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: creditssssssssssssssssssssssss
+  m_text: '
+
+    creditssssssssssssssssssssssss'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

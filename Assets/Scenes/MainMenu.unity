@@ -303,6 +303,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8348651069084021422, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348651069657163621, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
+      propertyPath: m_text
+      value: "Assets Used:\r\nCity Voxel Pack by Po\xE8Me\r\nLow Poly Props Pack
+        by Indie_G\r\nRPG FPS Game Assets Industrial by Dmitri Kutsenko\r\nPBR Industrial
+        Props by Adequate\r\nSci-Fi Styled Modular Pack by KARBOOSX\r\nSky City Lite
+        by Red Pand\r\nStandard Assets by Unity Technologies\n\rSpace Robot Kyle
+        by Unity Technologies\r\nCyberSoldier by Will Morillas\r\n\rSci Fi Gun by
+        MASH Virtual\r\nSci-Fi Gun by GRASBOCK\r\nShooting Sound by  GDTitan\r\nSOUNDS:\nHurt
+        Sound by  Jocabundus\r\nDoor Sound by  All Sounds\r\nAccess Denied Sound
+        by  All Sounds\r\nUdemy Complete C# Unity Game Developer 3D by  Gamedev.tv\r\nCarbine
+        Gun, Wall Texture, Sound for Unlocked door, Base Code And ideas.\nAnimations
+        used for robots by Mixamo"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348651069657163675, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8348651070698510728, guid: 9c740ee4a4ef0f045bd405a90ab363ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
