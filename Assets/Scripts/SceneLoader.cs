@@ -7,12 +7,12 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader instance;
 
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     LoadFinalScene();
-    //     Debug.Log("triggerfinalscene");
-    //     Cursor.visible = true;
-    // }
+    private void OnTriggerEnter(Collider other)
+    {
+        LoadCutScene();
+        Debug.Log("cutscene");
+        Cursor.visible = true;
+    }
     public void PlayAgain()
     {
         Time.timeScale = 1;
@@ -41,9 +41,9 @@ public class SceneLoader : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 1;
     }
-    // public void LoadFinalScene()
-    // {
-    //     //load final scene, should be cut scene for ending
-    //     SceneManager.LoadScene(3);
-    // }
+    public void LoadCutScene()
+    {
+        //load cut scene, should load the cut scene before ending text
+        SceneManager.LoadScene("CutScene");
+    }
 }

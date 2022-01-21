@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6162630155052433502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5700008, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2031054432898466983}
@@ -598,6 +598,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6d4c04a672c7641879a4600e7bd911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 100
+  maxPlayerHealth: 100
+  additionalHealth: 10
   healthText: {fileID: 0}
   weaponIterate: {fileID: 1595188723353224349}
 --- !u!1 &7886851510974254941
@@ -774,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: impactForce
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: magazineSize
@@ -792,7 +795,8 @@ PrefabInstance:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 7750012023234860018}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2625352687250317194, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
 --- !u!4 &813263673888578681 stripped
 Transform:
@@ -880,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: impactForce
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: nextTimeToFire
@@ -918,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: impactForce
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: magazineSize

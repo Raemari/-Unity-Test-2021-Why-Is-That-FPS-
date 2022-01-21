@@ -8,6 +8,7 @@ Sky City Lite by Red Pand - https://assetstore.unity.com/packages/3d/environment
 Standard Assets by Unity Technologies - https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351
 Space Robot Kyle by Unity Technologies - https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696
 CyberSoldier by Will Morillas - https://assetstore.unity.com/packages/3d/characters/robots/cyber-soldier-52064
+Exo Gray by Mixamo - https://www.mixamo.com/#/
 Sci Fi Gun by MASH Virtual - https://assetstore.unity.com/packages/3d/props/guns/sci-fi-gun-162872
 Sci-Fi Gun by GRASBOCK - https://assetstore.unity.com/packages/3d/sci-fi-gun-30826
 
@@ -20,4 +21,4 @@ Access Denied Sound by  All Sounds - https://www.youtube.com/watch?v=lSlTdQFYLA4
 Udemy Complete C# Unity Game Developer 3D by  Gamedev.tv - https://www.udemy.com/course/unitycourse2/
 Carbine Gun, Wall Texture, Sound for Unlocked door Base Code And ideas.
 
-Animations used for robots by Mixamo - https://www.mixamo.com/#/
+Animations used for robots and Exo Gray by Mixamo - https://www.mixamo.com/#/
