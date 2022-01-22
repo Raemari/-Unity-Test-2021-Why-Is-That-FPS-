@@ -24,9 +24,6 @@ public class DoorController : MonoBehaviour
         if(doorName == this.doorName && id == this.id)
         {
             doorAnim.SetBool("character_nearby", true);
-            //AudioManager.instance.Play("door");
-            GameManager.GM.PlayDoorOpen();
-            // col.enabled = false;
         }
     }
     private void OnDoorWayClose(string doorName, int id)
@@ -34,7 +31,6 @@ public class DoorController : MonoBehaviour
         if(doorName == this.doorName && id == this.id)
         {
             doorAnim.SetBool("character_nearby", false);
-            // col.enabled = true;
         }
     }
     private void OnDoorWayLocked(string doorName, int id)

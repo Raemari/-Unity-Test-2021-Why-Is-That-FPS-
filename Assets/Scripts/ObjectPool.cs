@@ -9,7 +9,7 @@ public class ObjectPoolItems
     public int amountToPool;
     public bool shouldExpand = true;
 }
-
+//NOTE: NOT USED IN THIS PROJECT
 public class ObjectPool : MonoBehaviour
 {
     //singleton to be easily accesible to other classes

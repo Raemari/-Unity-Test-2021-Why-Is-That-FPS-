@@ -64,8 +64,9 @@ public class PlayerManager : MonoBehaviour
                     {
                         weaponIterate.GetChild(i).GetComponent<Weapon>().IncreaseMagazine();
                         Debug.Log("GET CURRENT AMMO AMOUNT GUUUN++");
-                        GameObject bulletPickup = ObjectPool.instance.GetPooledObject("PickupAmmo");
-                        other.gameObject.SetActive(false);
+                        Destroy(other.gameObject);
+                        // GameObject bulletPickup = ObjectPool.instance.GetPooledObject("PickupAmmo");
+                        // other.gameObject.SetActive(false);
                     }
                     break;
                 }
@@ -75,8 +76,9 @@ public class PlayerManager : MonoBehaviour
                     {
                         weaponIterate.GetChild(i).GetComponent<Weapon>().IncreaseMagazine();
                         Debug.Log("GET CURRENT AMMO AMOUNT SICIFIGUN++");
-                        GameObject shellsPickup = ObjectPool.instance.GetPooledObject("PickupShells");
-                        other.gameObject.SetActive(false);
+                        Destroy(other.gameObject);
+                        // GameObject shellsPickup = ObjectPool.instance.GetPooledObject("PickupShells");
+                        // other.gameObject.SetActive(false);
                     }
                     break;
                 }
@@ -86,8 +88,9 @@ public class PlayerManager : MonoBehaviour
                     {
                         weaponIterate.GetChild(i).GetComponent<Weapon>().IncreaseMagazine();
                         Debug.Log("GET CURRENT AMMO AMOUNT CARBINE++");
-                        GameObject pickupRocket = ObjectPool.instance.GetPooledObject("PickupRocket");
-                        other.gameObject.SetActive(false);
+                        Destroy(other.gameObject);
+                        // GameObject pickupRocket = ObjectPool.instance.GetPooledObject("PickupRocket");
+                        // other.gameObject.SetActive(false);
                     }
                     break;
                 }

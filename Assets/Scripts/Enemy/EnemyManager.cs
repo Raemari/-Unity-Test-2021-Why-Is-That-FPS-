@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    //NOTE: NOT USED IN THIS PROJECT
     public static EnemyManager enemyManager;
     public GameObject[] spawnPoints;
 

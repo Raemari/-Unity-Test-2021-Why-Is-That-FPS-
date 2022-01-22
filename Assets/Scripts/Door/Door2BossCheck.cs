@@ -10,20 +10,24 @@ public class Door2BossCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        for(int i = 0; i < enemyBosses.Length; i++)
+        //so that enemy cannot be locked when wandering
+        if(other.gameObject.tag == "Player")
         {
-            if(enemyBosses[i].activeInHierarchy)
+            for(int i = 0; i < enemyBosses.Length; i++)
             {
-                GameEvents.instance.DoorWayTriggerLocked(doorName, id);
-                GameEvents.instance.DoorWayTriggerClose(doorName, id);
-                //AudioManager.instance.Play("locked");
-                GameManager.GM.PlayDoorLocked();
-            }
-            else
-            {
-                GameEvents.instance.DoorWayTriggerUnlocked(doorName, id);
-                //AudioManager.instance.Play("unlocked");
-                GameManager.GM.PlayDoorUnlocked();
+                if(enemyBosses[i].activeInHierarchy)
+                {
+                    GameEvents.instance.DoorWayTriggerLocked(doorName, id);
+                    GameEvents.instance.DoorWayTriggerClose(doorName, id);
+                    //AudioManager.instance.Play("locked");
+                    GameManager.GM.PlayDoorLocked();
+                }
+                else
+                {
+                    GameEvents.instance.DoorWayTriggerUnlocked(doorName, id);
+                    //AudioManager.instance.Play("unlocked");
+                    GameManager.GM.PlayDoorUnlocked();
+                }
             }
         }
     }

@@ -9,6 +9,11 @@ public class DoorTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameEvents.instance.DoorWayTriggerEnter(doorName, id);
+        //only the player can trigger the enter sound
+        if(other.gameObject.tag == "Player")
+        {
+            GameManager.GM.PlayDoorOpen();
+        }
     }
     private void OnTriggerExit(Collider other)
     {

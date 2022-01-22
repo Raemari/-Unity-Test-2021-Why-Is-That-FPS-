@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     public int currentAmmo;
     public int maxAmmo = 10;
     public int magazineSize;
-    private int maxMagazineSize = 50;
+    [SerializeField] int maxMagazineSize = 50;
 
     public float reloadTime = 2f;
     public Animator animator;
@@ -72,7 +72,7 @@ public class Weapon : MonoBehaviour
     {
         if(magazineSize <= maxMagazineSize)
         {
-            magazineSize+=10;
+            magazineSize+=20;
         }
         if(magazineSize > maxMagazineSize)
         {

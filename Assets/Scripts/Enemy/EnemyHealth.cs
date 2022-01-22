@@ -38,15 +38,5 @@ public class EnemyHealth : MonoBehaviour
                 OnEnemyKilled();
             }
         }
-        // if(gameObject.tag == "EnemyBoss")
-        // {
-        //     gameObject.SetActive(false);
-
-        //     if(OnEnemyKilled != null)
-        //     {
-        //         OnEnemyKilled();
-        //     }
-        // }
-
     }
 }
