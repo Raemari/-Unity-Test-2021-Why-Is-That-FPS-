@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] int playerHealth = 100;
     [SerializeField] int maxPlayerHealth = 100;
-    [SerializeField] int additionalHealth = 10;
+    [SerializeField] int additionalHealth = 20;
     [SerializeField] TextMeshProUGUI healthText;
 
     [SerializeField] Transform weaponIterate;

@@ -27,5 +27,10 @@ public class Door1BossCheck : MonoBehaviour
                 // GameManager.GM.PlayDoorUnlocked();
             }
         }
+        if(other.gameObject.tag == "Enemy")
+        {
+            GameEvents.instance.DoorWayTriggerUnlocked(doorName, id);
+            Debug.Log("ENEMY ENABLED DOOR UNLOCK");
+        }
     }
 }

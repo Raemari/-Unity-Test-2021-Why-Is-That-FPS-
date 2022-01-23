@@ -30,5 +30,9 @@ public class Door2BossCheck : MonoBehaviour
                 }
             }
         }
+        if(other.gameObject.tag == "Enemy")
+        {
+            GameEvents.instance.DoorWayTriggerUnlocked(doorName, id);
+        }
     }
 }
