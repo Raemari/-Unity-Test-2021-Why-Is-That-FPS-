@@ -45,7 +45,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9189437511756184850
 MonoBehaviour:
@@ -59,8 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d32a3164df33f41aed16561f73f65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalHealth: 15
+  additionalHealth: 20
   playerManager: {fileID: 0}
+  pickupParticle: {fileID: 0}
 --- !u!1001 &2939443419172595900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711975037907417708, guid: 70adced981de9d3498a9b0d4454ceb38, type: 3}
       propertyPath: m_VersionIndex
-      value: 400
+      value: 418
       objectReference: {fileID: 0}
     - target: {fileID: 3711975037907417711, guid: 70adced981de9d3498a9b0d4454ceb38, type: 3}
       propertyPath: m_Mesh
@@ -188,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 15540544769783932, guid: 2d5480fd6480af94f937ef85b2311731, type: 3}
       propertyPath: m_VersionIndex
-      value: 1128
+      value: 1146
       objectReference: {fileID: 0}
     - target: {fileID: 757956754035857907, guid: 2d5480fd6480af94f937ef85b2311731, type: 3}
       propertyPath: m_Mesh

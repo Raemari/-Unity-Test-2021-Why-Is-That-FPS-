@@ -79,8 +79,10 @@ MonoBehaviour:
   currentAmmo: 0
   maxAmmo: 10
   magazineSize: 0
+  maxMagazineSize: 50
   reloadTime: 2
   animator: {fileID: 0}
+  allowedToShoot: 1
 --- !u!114 &2625352687250317194
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -341,7 +341,7 @@ MonoBehaviour:
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
-  m_GravityMultiplier: 4
+  m_GravityMultiplier: 5
   m_MouseLook:
     XSensitivity: 2
     YSensitivity: 2
@@ -455,7 +455,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7750012023224133138}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -716,16 +716,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2700006
       objectReference: {fileID: 0}
     - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.61499983
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9700012
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -756,8 +768,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: damage
-      value: 3
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: maxAmmo
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: ammoSlot
@@ -773,19 +793,39 @@ PrefabInstance:
       objectReference: {fileID: 7895835460532647883}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: fireRate
-      value: 10
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: currentAmmo
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: impactForce
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: magazineSize
-      value: 30
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: muzzleFlashVFX
+      value: 
+      objectReference: {fileID: 8533196365579063179}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: nextTimeToFire
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 177756353197014981, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: maxMagazineSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315279246939054243, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.088
       objectReference: {fileID: 0}
     - target: {fileID: 2625352687250317194, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
       propertyPath: fpsCamera
@@ -803,6 +843,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 417070, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
   m_PrefabInstance: {fileID: 813263673888719191}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &8533196365579063179 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9017697265567092444, guid: 38075ff1c3cff91428ade499a59bdc97, type: 3}
+  m_PrefabInstance: {fileID: 813263673888719191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2963296695614349287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -815,12 +860,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3832703582600944448, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832703582600944448, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 3832703582600944448, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.45499983
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 3832703582600944448, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -863,8 +912,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: range
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: damage
-      value: 6
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: maxAmmo
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: animator
@@ -876,19 +933,31 @@ PrefabInstance:
       objectReference: {fileID: 7895835460532647883}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: fireRate
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: reloadTime
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: currentAmmo
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: impactForce
-      value: 5
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: magazineSize
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: nextTimeToFire
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608617774228453647, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
+      propertyPath: maxMagazineSize
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6563352152057651982, guid: bceefb2a39f6db74d9bc9d006687b7f1, type: 3}
       propertyPath: Loop
@@ -909,6 +978,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1595188723353224349}
     m_Modifications:
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: range
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 6046346930323754995}
@@ -921,16 +998,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: reloadTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: currentAmmo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: impactForce
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: magazineSize
-      value: 25
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 558242205935096798, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: maxMagazineSize
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -938,11 +1031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.325
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0299965
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_LocalRotation.w

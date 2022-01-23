@@ -38,15 +38,25 @@ public class Weapon : MonoBehaviour
     private void Update()
     {
         CheckAmmo();
-        if(Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire && currentAmmo > 0 && magazineSize >= 0 && allowedToShoot == true)
+        ReloadManual();
+
+        if(isRealoading == false)
+        {
+            Shooting();
+        }
+    }
+
+    private void Shooting()
+    {
+        if (Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire && currentAmmo > 0 && magazineSize >= 0 && allowedToShoot == true)
         {
             isShooting = true;
-            if(isShooting == true)
+            if (isShooting == true)
             {
-            //limits the number of ammo the player can shoot /sec
-            nextTimeToFire = Time.time + (1f/fireRate);
-            animator.SetBool("isShooting", true);
-            Fire();
+                //limits the number of ammo the player can shoot /sec
+                nextTimeToFire = Time.time + (1f / fireRate);
+                animator.SetBool("isShooting", true);
+                Fire();
             }
         }
         else
@@ -54,6 +64,7 @@ public class Weapon : MonoBehaviour
             animator.SetBool("isShooting", false);
         }
     }
+
     private void CheckAmmo()
     {
         if(currentAmmo == 0 && magazineSize == 0)
@@ -98,6 +109,14 @@ public class Weapon : MonoBehaviour
             magazineSize = 0;
         }
         isRealoading = false;
+    }
+    private void ReloadManual()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            isRealoading = true;
+            StartCoroutine(ReloadAmmo());
+        }
     }
     private void Fire()
     {

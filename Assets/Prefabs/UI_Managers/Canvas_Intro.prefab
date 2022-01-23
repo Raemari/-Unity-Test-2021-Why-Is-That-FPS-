@@ -1035,10 +1035,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "DeFault keys:\n\nmovement - w a s d\njump     - space\nrun      - left
-    ctrl\nesc      - pause game\nshoot    - left click\nscroll wheel/# 1, 2, 3\n
-    - switch gun\n\nMovement and jump keys can be changed in settings->keybinds\nresolution
-    can also be changed in settings"
+  m_text: 'DeFault keys:
+
+    movement - w a s d
+
+    jump     - space
+
+    run     
+    - left ctrl
+
+    esc      - pause game
+
+    shoot    - left click
+
+    Reload  
+    - R
+
+    scroll wheel/# 1, 2, 3 - switch gun
+
+
+    Movement and jump keys can
+    be changed in settings->keybinds
+
+    resolution can also be changed in settings'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
