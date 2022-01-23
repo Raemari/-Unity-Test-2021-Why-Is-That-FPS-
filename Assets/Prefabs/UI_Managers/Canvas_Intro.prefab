@@ -546,7 +546,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Set in a futuristic post apocalyptic world...\n\nYou found yourself in
     an unknown location \u2014 Trapped in a place where robots attack humans. your
-    goal is to survive whilst seaching for the designated area arranged for humans
+    goal is to survive whilst searching for the designated area arranged for humans
     by other survivors.\n\nWill you be able to find out why? Or is there even an
     answer..."
   m_isRightToLeft: 0
@@ -1044,20 +1044,20 @@ MonoBehaviour:
     run     
     - left ctrl
 
-    esc      - pause game
+    pause    - esc
 
     shoot    - left click
 
-    Reload  
-    - R
+    Reload   - R
 
-    scroll wheel/# 1, 2, 3 - switch gun
+    scroll
+    wheel/# 1, 2, 3 - switch gun
 
 
-    Movement and jump keys can
-    be changed in settings->keybinds
+    Movement and jump keys can be changed in settings->keybinds
 
-    resolution can also be changed in settings'
+    resolution
+    can also be changed in settings'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
