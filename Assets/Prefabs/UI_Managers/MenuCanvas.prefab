@@ -6662,13 +6662,13 @@ MonoBehaviour:
   m_text: "Assets Used:\r\nCity Voxel Pack by Po\xE8Me\r\nLow Poly Props Pack by
     Indie_G\r\nRPG FPS Game Assets Industrial by Dmitri Kutsenko\r\nPBR Industrial
     Props by Adequate\r\nSci-Fi Styled Modular Pack by KARBOOSX\r\nSky City Lite
-    by Red Pand\r\nStandard Assets by Unity Technologies\n\rSpace Robot Kyle by Unity
-    Technologies\r\nCyberSoldier by Will Morillas\r\nExo Gray by Mixamo\n\rSci Fi
-    Gun by MASH Virtual\r\nSci-Fi Gun by GRASBOCK\r\nShooting Sound by  GDTitan\r\nSOUNDS:\nHurt
+    by Red Pand\ra\nStandard Assets by Unity Technologies\n\rSpace Robot Kyle by
+    Unity Technologies\r\nCyberSoldier by Will Morillas\r\nExo Gray by Mixamo\n\rSci
+    Fi Gun by MASH Virtual\r\nSci-Fi Gun by GRASBOCK\r\nShooting Sound by  GDTitan\r\nSOUNDS:\nHurt
     Sound by  Jocabundus\r\nDoor Sound by  All Sounds\r\nAccess Denied Sound by 
     All Sounds\r\nUdemy Complete C# Unity Game Developer 3D by  Gamedev.tv\r\nCarbine
     Gun, Wall Texture, Sound for Unlocked door, Base Code And ideas.\nAnimations
-    used for robots and Exo Gray by Mixamo "
+    used for robots and Exo Gray by Mixamo \nGame by:RAEMARI MIKAELLA CRUZ"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -6695,8 +6695,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.6
-  m_fontSizeBase: 27.6
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

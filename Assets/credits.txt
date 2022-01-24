@@ -22,3 +22,5 @@ Udemy Complete C# Unity Game Developer 3D by  Gamedev.tv - https://www.udemy.com
 Carbine Gun, Wall Texture, Sound for Unlocked door Base Code And ideas.
 
 Animations used for robots and Exo Gray by Mixamo - https://www.mixamo.com/#/
+
+Game by: Raemari Mikaella Cruz
